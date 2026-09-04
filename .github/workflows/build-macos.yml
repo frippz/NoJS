@@ -40,7 +40,8 @@ jobs:
         id: package
         run: |
           staging="$RUNNER_TEMP/NoJS-dmg"
-          artifact="$RUNNER_TEMP/NoJS-macOS-nightly-${GITHUB_SHA}.dmg"
+          short_sha="${GITHUB_SHA::8}"
+          artifact="$RUNNER_TEMP/NoJS-macOS-nightly-${short_sha}.dmg"
 
           mkdir -p "$staging"
           ditto \
