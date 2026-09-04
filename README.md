@@ -27,6 +27,31 @@ NoJS is a Safari Web Extension for quickly disabling JavaScript on individual we
 
 The repository also contains a macOS GitHub Actions workflow. It runs nightly and can be started manually from the Actions tab. CI artifacts are unsigned development builds.
 
+## Installing a nightly build
+
+Nightly releases are unsigned. To install and ad-hoc sign one locally:
+
+1. Download the DMG from the latest nightly release and open it.
+2. Drag `NoJS.app` to the Applications folder.
+3. Open Terminal and sign the installed app bundle:
+
+   ```sh
+   codesign --force --deep --sign - /Applications/NoJS.app
+   ```
+
+   If the app is not writable by your account, run the command with `sudo`.
+
+4. Verify the signature:
+
+   ```sh
+   codesign --verify --deep --strict --verbose=2 /Applications/NoJS.app
+   ```
+
+5. Control-click `NoJS.app`, choose **Open**, and confirm the first launch if macOS asks.
+6. Open Safari's extension settings, enable NoJS, and grant it website access.
+
+An ad-hoc signature is local to your copy of the app. It does not provide Apple notarization or establish the developer's identity.
+
 ## License
 
 NoJS is available under the [MIT License](LICENSE).
