@@ -1,0 +1,899 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35807E11304AE3FA007A8D19 /* NoJS Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 35807E10304AE3FA007A8D19 /* NoJS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		35807E1B304AE3FA007A8D19 /* NoJS Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 35807E1A304AE3FA007A8D19 /* NoJS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35807E12304AE3FA007A8D19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35807DD7304AE3F9007A8D19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35807E0F304AE3FA007A8D19;
+			remoteInfo = "NoJS Extension (iOS)";
+		};
+		35807E1C304AE3FA007A8D19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35807DD7304AE3F9007A8D19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35807E19304AE3FA007A8D19;
+			remoteInfo = "NoJS Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35807E43304AE3FA007A8D19 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				35807E11304AE3FA007A8D19 /* NoJS Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+		35807E4D304AE3FA007A8D19 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				35807E1B304AE3FA007A8D19 /* NoJS Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		35807DF3304AE3FA007A8D19 /* NoJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35807E05304AE3FA007A8D19 /* NoJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35807E10304AE3FA007A8D19 /* NoJS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoJS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35807E1A304AE3FA007A8D19 /* NoJS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NoJS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		35807E3E304AE3FA007A8D19 /* Exceptions for "Shared (App)" folder in "NoJS (iOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Resources/Main.html",
+				Assets.xcassets,
+				Resources/Icon.png,
+				Resources/Script.js,
+				Resources/Style.css,
+				ViewController.swift,
+			);
+			target = 35807DF2304AE3FA007A8D19 /* NoJS (iOS) */;
+		};
+		35807E42304AE3FA007A8D19 /* Exceptions for "iOS (Extension)" folder in "NoJS Extension (iOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 35807E0F304AE3FA007A8D19 /* NoJS Extension (iOS) */;
+		};
+		35807E47304AE3FA007A8D19 /* Exceptions for "iOS (App)" folder in "NoJS (iOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 35807DF2304AE3FA007A8D19 /* NoJS (iOS) */;
+		};
+		35807E48304AE3FA007A8D19 /* Exceptions for "Shared (App)" folder in "NoJS (macOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Resources/Main.html",
+				Assets.xcassets,
+				Resources/Icon.png,
+				Resources/Script.js,
+				Resources/Style.css,
+				ViewController.swift,
+			);
+			target = 35807E04304AE3FA007A8D19 /* NoJS (macOS) */;
+		};
+		35807E4C304AE3FA007A8D19 /* Exceptions for "macOS (Extension)" folder in "NoJS Extension (macOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 35807E19304AE3FA007A8D19 /* NoJS Extension (macOS) */;
+		};
+		35807E51304AE3FA007A8D19 /* Exceptions for "Shared (Extension)" folder in "NoJS Extension (iOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/_locales,
+				Resources/background.js,
+				Resources/content.js,
+				Resources/images,
+				Resources/manifest.json,
+				Resources/popup.css,
+				Resources/popup.html,
+				Resources/popup.js,
+				SafariWebExtensionHandler.swift,
+			);
+			target = 35807E0F304AE3FA007A8D19 /* NoJS Extension (iOS) */;
+		};
+		35807E52304AE3FA007A8D19 /* Exceptions for "Shared (Extension)" folder in "NoJS Extension (macOS)" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/_locales,
+				Resources/background.js,
+				Resources/content.js,
+				Resources/images,
+				Resources/manifest.json,
+				Resources/popup.css,
+				Resources/popup.html,
+				Resources/popup.js,
+				SafariWebExtensionHandler.swift,
+			);
+			target = 35807E19304AE3FA007A8D19 /* NoJS Extension (macOS) */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		35807DDB304AE3F9007A8D19 /* Shared (App) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				35807E3E304AE3FA007A8D19 /* Exceptions for "Shared (App)" folder in "NoJS (iOS)" target */,
+				35807E48304AE3FA007A8D19 /* Exceptions for "Shared (App)" folder in "NoJS (macOS)" target */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		35807DE4304AE3FA007A8D19 /* Shared (Extension) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				35807E51304AE3FA007A8D19 /* Exceptions for "Shared (Extension)" folder in "NoJS Extension (iOS)" target */,
+				35807E52304AE3FA007A8D19 /* Exceptions for "Shared (Extension)" folder in "NoJS Extension (macOS)" target */,
+			);
+			explicitFolders = (
+				Resources/_locales,
+				Resources/images,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		35807DF5304AE3FA007A8D19 /* iOS (App) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				35807E47304AE3FA007A8D19 /* Exceptions for "iOS (App)" folder in "NoJS (iOS)" target */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		35807E06304AE3FA007A8D19 /* macOS (App) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		35807E14304AE3FA007A8D19 /* iOS (Extension) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				35807E42304AE3FA007A8D19 /* Exceptions for "iOS (Extension)" folder in "NoJS Extension (iOS)" target */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		35807E1E304AE3FA007A8D19 /* macOS (Extension) */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				35807E4C304AE3FA007A8D19 /* Exceptions for "macOS (Extension)" folder in "NoJS Extension (macOS)" target */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35807DF0304AE3FA007A8D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		35807E02304AE3FA007A8D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		35807E0D304AE3FA007A8D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		35807E17304AE3FA007A8D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35807DD6304AE3F9007A8D19 = {
+			isa = PBXGroup;
+			children = (
+				35807DDB304AE3F9007A8D19 /* Shared (App) */,
+				35807DE4304AE3FA007A8D19 /* Shared (Extension) */,
+				35807DF5304AE3FA007A8D19 /* iOS (App) */,
+				35807E06304AE3FA007A8D19 /* macOS (App) */,
+				35807E14304AE3FA007A8D19 /* iOS (Extension) */,
+				35807E1E304AE3FA007A8D19 /* macOS (Extension) */,
+				35807DF4304AE3FA007A8D19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35807DF4304AE3FA007A8D19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35807DF3304AE3FA007A8D19 /* NoJS.app */,
+				35807E05304AE3FA007A8D19 /* NoJS.app */,
+				35807E10304AE3FA007A8D19 /* NoJS Extension.appex */,
+				35807E1A304AE3FA007A8D19 /* NoJS Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35807DF2304AE3FA007A8D19 /* NoJS (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35807E44304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS (iOS)" */;
+			buildPhases = (
+				35807DEF304AE3FA007A8D19 /* Sources */,
+				35807DF0304AE3FA007A8D19 /* Frameworks */,
+				35807DF1304AE3FA007A8D19 /* Resources */,
+				35807E43304AE3FA007A8D19 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35807E13304AE3FA007A8D19 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				35807DF5304AE3FA007A8D19 /* iOS (App) */,
+			);
+			name = "NoJS (iOS)";
+			productName = "NoJS (iOS)";
+			productReference = 35807DF3304AE3FA007A8D19 /* NoJS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35807E04304AE3FA007A8D19 /* NoJS (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35807E4E304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS (macOS)" */;
+			buildPhases = (
+				35807E01304AE3FA007A8D19 /* Sources */,
+				35807E02304AE3FA007A8D19 /* Frameworks */,
+				35807E03304AE3FA007A8D19 /* Resources */,
+				35807E4D304AE3FA007A8D19 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35807E1D304AE3FA007A8D19 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				35807E06304AE3FA007A8D19 /* macOS (App) */,
+			);
+			name = "NoJS (macOS)";
+			productName = "NoJS (macOS)";
+			productReference = 35807E05304AE3FA007A8D19 /* NoJS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35807E0F304AE3FA007A8D19 /* NoJS Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35807E3F304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS Extension (iOS)" */;
+			buildPhases = (
+				35807E0C304AE3FA007A8D19 /* Sources */,
+				35807E0D304AE3FA007A8D19 /* Frameworks */,
+				35807E0E304AE3FA007A8D19 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				35807E14304AE3FA007A8D19 /* iOS (Extension) */,
+			);
+			name = "NoJS Extension (iOS)";
+			productName = "NoJS Extension (iOS)";
+			productReference = 35807E10304AE3FA007A8D19 /* NoJS Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		35807E19304AE3FA007A8D19 /* NoJS Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35807E49304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS Extension (macOS)" */;
+			buildPhases = (
+				35807E16304AE3FA007A8D19 /* Sources */,
+				35807E17304AE3FA007A8D19 /* Frameworks */,
+				35807E18304AE3FA007A8D19 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				35807E1E304AE3FA007A8D19 /* macOS (Extension) */,
+			);
+			name = "NoJS Extension (macOS)";
+			productName = "NoJS Extension (macOS)";
+			productReference = 35807E1A304AE3FA007A8D19 /* NoJS Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35807DD7304AE3F9007A8D19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					35807DF2304AE3FA007A8D19 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					35807E04304AE3FA007A8D19 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					35807E0F304AE3FA007A8D19 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					35807E19304AE3FA007A8D19 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 35807DDA304AE3F9007A8D19 /* Build configuration list for PBXProject "NoJS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35807DD6304AE3F9007A8D19;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 35807DF4304AE3FA007A8D19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35807DF2304AE3FA007A8D19 /* NoJS (iOS) */,
+				35807E04304AE3FA007A8D19 /* NoJS (macOS) */,
+				35807E0F304AE3FA007A8D19 /* NoJS Extension (iOS) */,
+				35807E19304AE3FA007A8D19 /* NoJS Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35807DF1304AE3FA007A8D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E03304AE3FA007A8D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E0E304AE3FA007A8D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E18304AE3FA007A8D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35807DEF304AE3FA007A8D19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E01304AE3FA007A8D19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E0C304AE3FA007A8D19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		35807E16304AE3FA007A8D19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35807E13304AE3FA007A8D19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35807E0F304AE3FA007A8D19 /* NoJS Extension (iOS) */;
+			targetProxy = 35807E12304AE3FA007A8D19 /* PBXContainerItemProxy */;
+		};
+		35807E1D304AE3FA007A8D19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35807E19304AE3FA007A8D19 /* NoJS Extension (macOS) */;
+			targetProxy = 35807E1C304AE3FA007A8D19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		35807E40304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS Extension (iOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NoJS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS.Extension;
+				PRODUCT_NAME = "NoJS Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35807E41304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS Extension (iOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NoJS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS.Extension;
+				PRODUCT_NAME = "NoJS Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35807E45304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS (iOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NoJS;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS;
+				PRODUCT_NAME = NoJS;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35807E46304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS (iOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = NoJS;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS;
+				PRODUCT_NAME = NoJS;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35807E4A304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS Extension (macOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NoJS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS.Extension;
+				PRODUCT_NAME = "NoJS Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		35807E4B304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS Extension (macOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "NoJS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS.Extension;
+				PRODUCT_NAME = "NoJS Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		35807E4F304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS (macOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NoJS;
+				INFOPLIST_KEY_CFBundleIconFile = AppIcon;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS;
+				PRODUCT_NAME = NoJS;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		35807E50304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS (macOS)" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NoJS;
+				INFOPLIST_KEY_CFBundleIconFile = AppIcon;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frodlund.NoJS;
+				PRODUCT_NAME = NoJS;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		35807E53304AE3FA007A8D19 /* Debug configuration for PBXProject "NoJS" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		35807E54304AE3FA007A8D19 /* Release configuration for PBXProject "NoJS" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XU3G5KB593;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35807DDA304AE3F9007A8D19 /* Build configuration list for PBXProject "NoJS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35807E53304AE3FA007A8D19 /* Debug configuration for PBXProject "NoJS" */,
+				35807E54304AE3FA007A8D19 /* Release configuration for PBXProject "NoJS" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		35807E3F304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35807E40304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS Extension (iOS)" */,
+				35807E41304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS Extension (iOS)" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		35807E44304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35807E45304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS (iOS)" */,
+				35807E46304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS (iOS)" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		35807E49304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35807E4A304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS Extension (macOS)" */,
+				35807E4B304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS Extension (macOS)" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		35807E4E304AE3FA007A8D19 /* Build configuration list for PBXNativeTarget "NoJS (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35807E4F304AE3FA007A8D19 /* Debug configuration for PBXNativeTarget "NoJS (macOS)" */,
+				35807E50304AE3FA007A8D19 /* Release configuration for PBXNativeTarget "NoJS (macOS)" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35807DD7304AE3F9007A8D19 /* Project object */;
+	validationLevel = 1;
+}

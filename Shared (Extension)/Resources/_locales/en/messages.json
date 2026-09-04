@@ -1,0 +1,10 @@
+{
+  "extension_name": {
+    "message": "NoJS",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "Disable JavaScript for individual domains from the Safari toolbar.",
+    "description": "Description of what the extension does."
+  }
+}

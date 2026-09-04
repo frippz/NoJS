@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoJS</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <span class="mark" aria-hidden="true">JS</span>
+      <div>
+        <h1>NoJS</h1>
+        <p id="domain" class="domain">Checking this page…</p>
+      </div>
+    </header>
+    <div class="divider"></div>
+    <label class="setting" for="toggle">
+      <span>
+        <strong>Disable JavaScript</strong>
+        <small id="description">For this domain</small>
+      </span>
+      <span class="switch">
+        <input id="toggle" type="checkbox" role="switch" disabled>
+        <span class="track" aria-hidden="true"><span class="thumb"></span></span>
+      </span>
+    </label>
+    <p id="status" class="status" role="status" aria-live="polite">The page will reload when changed.</p>
+  </main>
+</body>
+
+</html>
