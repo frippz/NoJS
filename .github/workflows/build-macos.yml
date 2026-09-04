@@ -1,4 +1,4 @@
-name: Build macOS app
+name: macOS nightly build
 
 on:
   schedule:
