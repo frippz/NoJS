@@ -1,5 +1,7 @@
 # <img src="./appicon.png" alt="" height="38" width="38" valign="middle"> NoJS
 
+[![macOS nightly build](https://github.com/frippz/NoJS/actions/workflows/build-macos.yml/badge.svg?branch=master)](https://github.com/frippz/NoJS/actions/workflows/build-macos.yml)
+
 NoJS is a Safari Web Extension for quickly disabling JavaScript on individual websites. Click its toolbar icon to toggle JavaScript for the current domain; NoJS remembers the choice and reloads the page automatically.
 
 ## Features
