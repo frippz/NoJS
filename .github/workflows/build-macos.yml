@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: build-macos
@@ -36,18 +36,46 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             build
 
-      - name: Package NoJS.app
+      - name: Package NoJS.dmg
         id: package
         run: |
-          artifact="$RUNNER_TEMP/NoJS-macOS-nightly-${GITHUB_RUN_NUMBER}.zip"
-          ditto -c -k --sequesterRsrc --keepParent \
+          staging="$RUNNER_TEMP/NoJS-dmg"
+          artifact="$RUNNER_TEMP/NoJS-macOS-nightly-${GITHUB_SHA}.dmg"
+
+          mkdir -p "$staging"
+          ditto \
             "$RUNNER_TEMP/DerivedData/Build/Products/Release/NoJS.app" \
+            "$staging/NoJS.app"
+          ln -s /Applications "$staging/Applications"
+          hdiutil create \
+            -volname "NoJS" \
+            -srcfolder "$staging" \
+            -format UDZO \
+            -ov \
             "$artifact"
           echo "path=$artifact" >> "$GITHUB_OUTPUT"
 
-      - name: Upload macOS app
+      - name: Upload macOS DMG
         uses: actions/upload-artifact@v7
         with:
           path: ${{ steps.package.outputs.path }}
           archive: false
           retention-days: 14
+
+      - name: Publish SHA-tagged nightly release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_PATH: ${{ steps.package.outputs.path }}
+        run: |
+          tag="nightly-${GITHUB_SHA}"
+          title="NoJS nightly ${GITHUB_SHA::7}"
+
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "$ARTIFACT_PATH" --clobber
+          else
+            gh release create "$tag" "$ARTIFACT_PATH" \
+              --target "$GITHUB_SHA" \
+              --title "$title" \
+              --notes "Unsigned macOS nightly DMG from commit ${GITHUB_SHA}." \
+              --prerelease
+          fi
