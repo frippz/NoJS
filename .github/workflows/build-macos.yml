@@ -63,7 +63,45 @@ jobs:
           archive: false
           retention-days: 14
 
+      - name: Compare with current nightly release
+        id: release_check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_PATH: ${{ steps.package.outputs.path }}
+        run: |
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+
+          latest_tag="$(gh release list \
+            --limit 100 \
+            --json tagName,isDraft \
+            --jq '[.[] | select(.isDraft == false and (.tagName | startswith("nightly-")))] | .[0].tagName // empty')"
+
+          if [[ -z "$latest_tag" ]]; then
+            echo "No existing nightly release found."
+            exit 0
+          fi
+
+          comparison_dir="$RUNNER_TEMP/current-nightly"
+          mkdir -p "$comparison_dir"
+
+          if ! gh release download "$latest_tag" \
+            --pattern "*.dmg" \
+            --dir "$comparison_dir"; then
+            echo "The current nightly has no DMG to compare."
+            exit 0
+          fi
+
+          released_assets=("$comparison_dir"/*.dmg)
+          current_md5="$(md5 -q "$ARTIFACT_PATH")"
+          released_md5="$(md5 -q "${released_assets[0]}")"
+
+          if [[ "$current_md5" == "$released_md5" ]]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::DMG matches $latest_tag; skipping the release."
+          fi
+
       - name: Publish SHA-tagged nightly release
+        if: steps.release_check.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ARTIFACT_PATH: ${{ steps.package.outputs.path }}
