@@ -1,4 +1,4 @@
-# <img src="./appicon.png" alt="" height="32" width="32"> NoJS
+# <img src="./appicon.png" alt="" height="38" width="38" valign="middle"> NoJS
 
 NoJS is a Safari Web Extension for quickly disabling JavaScript on individual websites. Click its toolbar icon to toggle JavaScript for the current domain; NoJS remembers the choice and reloads the page automatically.
 
