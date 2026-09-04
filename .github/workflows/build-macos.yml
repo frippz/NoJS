@@ -1,0 +1,53 @@
+name: Build macOS app
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-macos
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build NoJS for macOS
+    runs-on: xcode-27
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build NoJS.app
+        run: |
+          xcodebuild \
+            -project NoJS.xcodeproj \
+            -scheme "NoJS (macOS)" \
+            -configuration Release \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath "$RUNNER_TEMP/DerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package NoJS.app
+        id: package
+        run: |
+          artifact="$RUNNER_TEMP/NoJS-macOS-nightly-${GITHUB_RUN_NUMBER}.zip"
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$RUNNER_TEMP/DerivedData/Build/Products/Release/NoJS.app" \
+            "$artifact"
+          echo "path=$artifact" >> "$GITHUB_OUTPUT"
+
+      - name: Upload macOS app
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ steps.package.outputs.path }}
+          archive: false
+          retention-days: 14
