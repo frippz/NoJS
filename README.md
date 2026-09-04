@@ -33,22 +33,28 @@ Nightly releases are unsigned. To install and ad-hoc sign one locally:
 
 1. Download the DMG from the latest nightly release and open it.
 2. Drag `NoJS.app` to the Applications folder.
-3. Open Terminal and sign the installed app bundle:
+3. Open Terminal and remove the download quarantine attribute:
+
+   ```sh
+   xattr -dr com.apple.quarantine /Applications/NoJS.app
+   ```
+
+4. Ad-hoc sign the installed app bundle:
 
    ```sh
    codesign --force --deep --sign - /Applications/NoJS.app
    ```
 
-   If the app is not writable by your account, run the command with `sudo`.
+   If the app is not writable by your account, run the `xattr` and `codesign` commands with `sudo`.
 
-4. Verify the signature:
+5. Verify the signature:
 
    ```sh
    codesign --verify --deep --strict --verbose=2 /Applications/NoJS.app
    ```
 
-5. Control-click `NoJS.app`, choose **Open**, and confirm the first launch if macOS asks.
-6. Open Safari's extension settings, enable NoJS, and grant it website access.
+6. Control-click `NoJS.app`, choose **Open**, and confirm the first launch if macOS asks.
+7. Open Safari's extension settings, enable NoJS, and grant it website access.
 
 An ad-hoc signature is local to your copy of the app. It does not provide Apple notarization or establish the developer's identity.
 
