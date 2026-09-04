@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Show Xcode version
         run: xcodebuild -version
@@ -75,6 +77,7 @@ jobs:
             --limit 100 \
             --json tagName,isDraft \
             --jq '[.[] | select(.isDraft == false and (.tagName | startswith("nightly-")))] | .[0].tagName // empty')"
+          echo "latest_tag=$latest_tag" >> "$GITHUB_OUTPUT"
 
           if [[ -z "$latest_tag" ]]; then
             echo "No existing nightly release found."
@@ -100,21 +103,57 @@ jobs:
             echo "::notice::DMG matches $latest_tag; skipping the release."
           fi
 
+      - name: Generate nightly release notes
+        if: steps.release_check.outputs.publish == 'true'
+        id: release_notes
+        env:
+          PREVIOUS_TAG: ${{ steps.release_check.outputs.latest_tag }}
+        run: |
+          notes="$RUNNER_TEMP/nightly-release-notes.md"
+          range="$GITHUB_SHA"
+          previous_tag="$PREVIOUS_TAG"
+
+          if [[ "$previous_tag" == "nightly-$GITHUB_SHA" ]]; then
+            previous_tag="$(git describe \
+              --tags \
+              --match "nightly-*" \
+              --abbrev=0 \
+              "$GITHUB_SHA^" 2>/dev/null || true)"
+          fi
+
+          if [[ -n "$previous_tag" ]] && git rev-parse --verify "$previous_tag^{commit}" >/dev/null 2>&1; then
+            range="$previous_tag..$GITHUB_SHA"
+          fi
+
+          {
+            echo "Unsigned macOS nightly DMG from commit \`$GITHUB_SHA\`."
+            echo
+            echo "Changes:"
+            echo
+            git log --reverse \
+              --format="- [\`%h\`](https://github.com/$GITHUB_REPOSITORY/commit/%H) %s" \
+              "$range"
+          } > "$notes"
+
+          echo "path=$notes" >> "$GITHUB_OUTPUT"
+
       - name: Publish SHA-tagged nightly release
         if: steps.release_check.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ARTIFACT_PATH: ${{ steps.package.outputs.path }}
+          RELEASE_NOTES_PATH: ${{ steps.release_notes.outputs.path }}
         run: |
           tag="nightly-${GITHUB_SHA}"
           title="NoJS nightly ${GITHUB_SHA::7}"
 
           if gh release view "$tag" >/dev/null 2>&1; then
             gh release upload "$tag" "$ARTIFACT_PATH" --clobber
+            gh release edit "$tag" --notes-file "$RELEASE_NOTES_PATH"
           else
             gh release create "$tag" "$ARTIFACT_PATH" \
               --target "$GITHUB_SHA" \
               --title "$title" \
-              --notes "Unsigned macOS nightly DMG from commit ${GITHUB_SHA}." \
+              --notes-file "$RELEASE_NOTES_PATH" \
               --prerelease
           fi
